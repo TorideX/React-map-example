@@ -1,24 +1,26 @@
-import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
 import { CustomMap } from './components/CustomMap';
+import { CustomModal } from './components/CustomModal';
+import { HelloGuys } from './components/testing';
+import {
+  CustomInput,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  
+} from 'reactstrap';
 
-class App extends Component {
-
-  state={
-    name:"How can I get to Taksim?"
-  }
-
-  myButtonClicked = ()=>{
-    this.setState({name:"Hawagi?"})
-  }
-
-  render(){
-    return (
-      <div className="App">
-        <CustomMap/>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+     <CustomMap/>
+     {/* <HelloGuys/> */}
+     <CustomModal/>
+    </div>
+  );
 }
 
 export default App;
